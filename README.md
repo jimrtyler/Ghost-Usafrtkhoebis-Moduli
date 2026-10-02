@@ -69,7 +69,9 @@ Ghost უზრუნველყოფს **16 Windows გამკვრივ
 ### უსაფრთხოების შეფასება
 ```powershell
 # Ghost მოდულის ჩატვირთვა
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # მიმდინარე უსაფრთხოების პოზიციის შემოწმება
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### ვარიანტი 1: პირდაპირი ჩამოტვირთვა (ტესტირება)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### ვარიანტი 2: მოდულის ინსტალაცია
